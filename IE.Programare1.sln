@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IE.Programare1.Cerc", "IE.P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IE.Programare1.NotaFinala", "IE.Programare1.NotaFinala\IE.Programare1.NotaFinala.csproj", "{60E9DBD8-E020-4489-B63E-FE2ACCC3916C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IE.Programare1.NumerePare", "IE.Programare1.NumerePare\IE.Programare1.NumerePare.csproj", "{841A5EF9-7158-4EC3-8B86-DD8F91429320}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{60E9DBD8-E020-4489-B63E-FE2ACCC3916C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60E9DBD8-E020-4489-B63E-FE2ACCC3916C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60E9DBD8-E020-4489-B63E-FE2ACCC3916C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{841A5EF9-7158-4EC3-8B86-DD8F91429320}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{841A5EF9-7158-4EC3-8B86-DD8F91429320}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{841A5EF9-7158-4EC3-8B86-DD8F91429320}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{841A5EF9-7158-4EC3-8B86-DD8F91429320}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

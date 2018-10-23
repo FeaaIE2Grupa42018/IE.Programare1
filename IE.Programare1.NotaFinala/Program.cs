@@ -15,7 +15,7 @@ namespace IE.Programare1.NotaFinala
 
             const float prag = 5;
 
-            if(notaPractic < 5 || (notaBb1 + notaBb2) / 2 < 5)
+            if(notaPractic < prag || (notaBb1 + notaBb2) / 2 < prag)
             {
                 Console.WriteLine("Nepromovat");
             }
