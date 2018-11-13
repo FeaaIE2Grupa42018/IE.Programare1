@@ -20,7 +20,7 @@ namespace IE.Programare1.Problema5
             bool ordonat = true;
             while(j < valori.Length - 1)
             {
-                if(valori[j] > valori[j + 1])
+                if(valori[j] < valori[j + 1])
                 {
                     ordonat = false;
                     break;
