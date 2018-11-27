@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{52AAE117-09E6-4BC8-A157-87D101184759}</ProjectGuid>
+    <ProjectGuid>{66D2EBBE-613A-4E10-A03A-2DEC3BA70485}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>IE.Programare1.CursSchimb2</RootNamespace>
-    <AssemblyName>IE.Programare1.CursSchimb2</AssemblyName>
+    <RootNamespace>IE.Programare1.Facturi</RootNamespace>
+    <AssemblyName>IE.Programare1.Facturi</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,17 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factura.cs" />
+    <Compile Include="Produs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\IE.Programare1.Util\IE.Programare1.Util.csproj">
-      <Project>{bd1016fc-1089-457d-a93d-69bb534bd970}</Project>
-      <Name>IE.Programare1.Util</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

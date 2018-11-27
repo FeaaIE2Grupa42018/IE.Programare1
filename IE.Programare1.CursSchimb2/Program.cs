@@ -16,7 +16,7 @@ namespace IE.Programare1.CursSchimb2
             {
                 for(int j = 0; j < cursuri.GetLength(1); j++)
                 {
-                    string luna = FunctiiDateTime.ObtineNumaLuna(j + 1);
+                    string luna = FunctiiDateTime.ObtineNumeLuna(j + 1);
                     if(i == 0)
                     {
                         Console.WriteLine("Introduceti cursul EUR " + luna);
@@ -36,7 +36,7 @@ namespace IE.Programare1.CursSchimb2
                 if(cursuri[0, i] == cursuri[1, i])
                 {
                     Array.Resize(ref luniCursuriEgale, luniCursuriEgale.Length + 1);
-                    luniCursuriEgale[luniCursuriEgale.Length - 1] = FunctiiDateTime.ObtineNumaLuna(i + 1);
+                    luniCursuriEgale[luniCursuriEgale.Length - 1] = FunctiiDateTime.ObtineNumeLuna(i + 1);
                 }
             }
 

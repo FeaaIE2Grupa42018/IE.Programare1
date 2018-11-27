@@ -62,7 +62,7 @@ namespace IE.Programare1.CursSchimb
             Console.WriteLine("Lunile de minim:");
             for(int i = 0; i < luniMin.Length; i++)
             {
-                Console.Write(FunctiiDateTime.ObtineNumaLuna(luniMin[i] + 1) + " ");
+                Console.Write(FunctiiDateTime.ObtineNumeLuna(luniMin[i] + 1) + " ");
             }
 
             //afisare max si > decat media
