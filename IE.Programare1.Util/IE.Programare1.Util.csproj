@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FunctiiCautareSortare.cs" />
     <Compile Include="FunctiiDateTime.cs" />
     <Compile Include="FunctiiMat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

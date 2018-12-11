@@ -8,9 +8,8 @@ namespace IE.Programare1.Util
 {
     public class FunctiiMat
     {
-        public double[] FctGrad2(double a, double b, double c, out bool infinitateSolutie)
+        public static double[] FctGrad2(double a, double b, double c, out bool infinitateSolutie)
         {
-            double delta;
             double[] radacini = new double[0];
             infinitateSolutie = false;
             if (a == 0 && b == 0 && c == 0)
@@ -29,8 +28,22 @@ namespace IE.Programare1.Util
                 radacini[0] = -c / b;
                 return radacini;
             }
-            delta = b * b - 4 * a * c;
-            //cazurile lui delta, negativ, 0, pozitiv...
+            double delta = Math.Pow(b, 2) - 4 * a * c;
+            if(delta >= 0)
+            {
+                Array.Resize(ref radacini, 2);
+                if(delta == 0)
+                {
+                    radacini[0] = radacini[1] = -b / 2 * a;
+                }
+                else
+                {
+                    radacini[0] = (-b + Math.Sqrt(delta)) / 2 * a;
+                    radacini[1] = (-b - Math.Sqrt(delta)) / 2 * a;
+                }
+            }
+            return radacini;
         }
+
     }
 }
