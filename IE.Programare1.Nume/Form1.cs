@@ -63,7 +63,7 @@ namespace IE.Programare1.Nume
         {
             string[] toSort = NumeToArray();
             int pozitie = FunctiiCautareSortare.Cauta(toSort, uxTextBoxCauta.Text);
-            MessageBox.Show("Valaoare se gaseste la pozitia " + pozitie);
+            MessageBox.Show("Valaoare se gaseste la pozitia " + (pozitie + 1));
         }
     }
 }
