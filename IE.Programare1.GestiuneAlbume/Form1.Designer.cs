@@ -62,7 +62,7 @@
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 90F));
@@ -78,7 +78,7 @@
             this.flowLayoutPanel1.Controls.Add(this.uxButtonDelete);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 4);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(875, 82);
             this.flowLayoutPanel1.TabIndex = 0;
@@ -101,31 +101,33 @@
             this.uxComboBoxAlbume.DisplayMember = "Denumire";
             this.uxComboBoxAlbume.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.uxComboBoxAlbume.FormattingEnabled = true;
-            this.uxComboBoxAlbume.Location = new System.Drawing.Point(83, 8);
-            this.uxComboBoxAlbume.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uxComboBoxAlbume.Location = new System.Drawing.Point(83, 10);
+            this.uxComboBoxAlbume.Margin = new System.Windows.Forms.Padding(4);
             this.uxComboBoxAlbume.Name = "uxComboBoxAlbume";
             this.uxComboBoxAlbume.Size = new System.Drawing.Size(268, 28);
             this.uxComboBoxAlbume.TabIndex = 1;
             this.uxComboBoxAlbume.ValueMember = "ID";
+            this.uxComboBoxAlbume.SelectedIndexChanged += new System.EventHandler(this.uxComboBoxAlbume_SelectedIndexChanged);
             // 
             // uxButtonNou
             // 
             this.uxButtonNou.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.uxButtonNou.AutoSize = true;
             this.uxButtonNou.Location = new System.Drawing.Point(359, 4);
-            this.uxButtonNou.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uxButtonNou.Margin = new System.Windows.Forms.Padding(4);
             this.uxButtonNou.Name = "uxButtonNou";
             this.uxButtonNou.Size = new System.Drawing.Size(100, 37);
             this.uxButtonNou.TabIndex = 2;
             this.uxButtonNou.Text = "Nou";
             this.uxButtonNou.UseVisualStyleBackColor = true;
+            this.uxButtonNou.Click += new System.EventHandler(this.uxButtonNou_Click);
             // 
             // uxButtonDelete
             // 
             this.uxButtonDelete.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.uxButtonDelete.AutoSize = true;
             this.uxButtonDelete.Location = new System.Drawing.Point(467, 4);
-            this.uxButtonDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uxButtonDelete.Margin = new System.Windows.Forms.Padding(4);
             this.uxButtonDelete.Name = "uxButtonDelete";
             this.uxButtonDelete.Size = new System.Drawing.Size(100, 37);
             this.uxButtonDelete.TabIndex = 3;
@@ -152,7 +154,7 @@
             this.tableLayoutPanel2.Controls.Add(this.label6, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 94);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 7;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
@@ -169,7 +171,7 @@
             // 
             this.uxTextBoxId.Enabled = false;
             this.uxTextBoxId.Location = new System.Drawing.Point(153, 4);
-            this.uxTextBoxId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uxTextBoxId.Margin = new System.Windows.Forms.Padding(4);
             this.uxTextBoxId.Name = "uxTextBoxId";
             this.uxTextBoxId.Size = new System.Drawing.Size(132, 27);
             this.uxTextBoxId.TabIndex = 0;
@@ -189,7 +191,7 @@
             // uxDateTimePickerData
             // 
             this.uxDateTimePickerData.Location = new System.Drawing.Point(153, 41);
-            this.uxDateTimePickerData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uxDateTimePickerData.Margin = new System.Windows.Forms.Padding(4);
             this.uxDateTimePickerData.Name = "uxDateTimePickerData";
             this.uxDateTimePickerData.Size = new System.Drawing.Size(333, 27);
             this.uxDateTimePickerData.TabIndex = 1;
@@ -198,7 +200,7 @@
             // 
             this.uxTextBoxDenumire.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.uxTextBoxDenumire.Location = new System.Drawing.Point(153, 79);
-            this.uxTextBoxDenumire.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uxTextBoxDenumire.Margin = new System.Windows.Forms.Padding(4);
             this.uxTextBoxDenumire.Name = "uxTextBoxDenumire";
             this.uxTextBoxDenumire.Size = new System.Drawing.Size(718, 27);
             this.uxTextBoxDenumire.TabIndex = 2;
@@ -243,7 +245,7 @@
             // 
             this.uxTextBoxPret.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.uxTextBoxPret.Location = new System.Drawing.Point(153, 153);
-            this.uxTextBoxPret.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uxTextBoxPret.Margin = new System.Windows.Forms.Padding(4);
             this.uxTextBoxPret.Name = "uxTextBoxPret";
             this.uxTextBoxPret.Size = new System.Drawing.Size(117, 27);
             this.uxTextBoxPret.TabIndex = 8;
@@ -258,8 +260,8 @@
             "Blu-Ray",
             "Caseta",
             "Vinil"});
-            this.uxComboBoxSuport.Location = new System.Drawing.Point(153, 189);
-            this.uxComboBoxSuport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uxComboBoxSuport.Location = new System.Drawing.Point(153, 191);
+            this.uxComboBoxSuport.Margin = new System.Windows.Forms.Padding(4);
             this.uxComboBoxSuport.Name = "uxComboBoxSuport";
             this.uxComboBoxSuport.Size = new System.Drawing.Size(160, 28);
             this.uxComboBoxSuport.TabIndex = 9;
@@ -280,18 +282,19 @@
             // 
             this.uxButtonSalveaza.AutoSize = true;
             this.uxButtonSalveaza.Location = new System.Drawing.Point(153, 226);
-            this.uxButtonSalveaza.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uxButtonSalveaza.Margin = new System.Windows.Forms.Padding(4);
             this.uxButtonSalveaza.Name = "uxButtonSalveaza";
             this.uxButtonSalveaza.Size = new System.Drawing.Size(127, 42);
             this.uxButtonSalveaza.TabIndex = 11;
             this.uxButtonSalveaza.Text = "Salveaza";
             this.uxButtonSalveaza.UseVisualStyleBackColor = true;
+            this.uxButtonSalveaza.Click += new System.EventHandler(this.uxButtonSalveaza_Click);
             // 
             // uxTextBoxArtist
             // 
             this.uxTextBoxArtist.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.uxTextBoxArtist.Location = new System.Drawing.Point(153, 116);
-            this.uxTextBoxArtist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uxTextBoxArtist.Margin = new System.Windows.Forms.Padding(4);
             this.uxTextBoxArtist.Name = "uxTextBoxArtist";
             this.uxTextBoxArtist.Size = new System.Drawing.Size(718, 27);
             this.uxTextBoxArtist.TabIndex = 3;
@@ -300,11 +303,11 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 8);
+            this.label6.Location = new System.Drawing.Point(38, 8);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(140, 20);
+            this.label6.Size = new System.Drawing.Size(108, 20);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Nr. inventar(ID)";
+            this.label6.Text = "Nr. inv. (ID)";
             // 
             // Form1
             // 
@@ -312,7 +315,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(883, 454);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Gestiune Albume";
             this.Load += new System.EventHandler(this.Form1_Load);

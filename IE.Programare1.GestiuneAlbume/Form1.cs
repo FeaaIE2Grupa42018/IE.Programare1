@@ -55,5 +55,81 @@ namespace IE.Programare1.GestiuneAlbume
             }
 
         }
+
+        private void uxComboBoxAlbume_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            OleDbConnection conn = GetConexiune();
+            if(conn == null)
+            {
+                return;
+            }
+            OleDbCommand selectCommand = new OleDbCommand();
+            selectCommand.Connection = conn;
+            selectCommand.CommandText = "select * from Albume where ID=@id";
+            selectCommand.Parameters.AddWithValue("id", uxComboBoxAlbume.SelectedValue);
+
+            OleDbDataReader reader = selectCommand.ExecuteReader();
+            reader.Read();
+
+            uxTextBoxId.Text = reader["ID"].ToString();
+            uxTextBoxDenumire.Text = reader["Denumire"].ToString();
+            //uxDateTimePickerData.Value = DateTime.Parse(reader["Data"].ToString());
+            uxDateTimePickerData.Value = reader.GetDateTime(1);
+            uxTextBoxArtist.Text = reader["Artist"].ToString();
+            uxTextBoxPret.Text = reader["Pret"].ToString();
+            uxComboBoxSuport.Text = reader["Suport"].ToString();
+
+
+            if(!reader.IsClosed)
+            {
+                reader.Close();
+            }
+            if(conn.State == ConnectionState.Open)
+            {
+                conn.Close();
+            }
+        }
+
+        private void uxButtonNou_Click(object sender, EventArgs e)
+        {
+            uxTextBoxId.Text = "0";
+            uxTextBoxDenumire.Text = "";
+            uxTextBoxPret.Text = "0";
+            uxTextBoxArtist.Clear();
+            uxDateTimePickerData.Value = DateTime.Today;
+            uxComboBoxSuport.Text = "";
+        }
+
+        private void uxButtonSalveaza_Click(object sender, EventArgs e)
+        {
+            OleDbConnection conn = GetConexiune();
+            OleDbCommand salveazaCommand = new OleDbCommand();
+            salveazaCommand.Connection = conn;
+            int id = int.Parse(uxTextBoxId.Text);
+            if(id == 0)
+            {
+                salveazaCommand.CommandText = "insert into Albume(Data,Denumire,Artist,Pret,Suport) values(@data, @denumire,@artist,@pret,@suport)";
+            }
+            else
+            {
+                salveazaCommand.CommandText = "update Albume set Data=@data,Denumire=@denumire,Artist=@artist,Pret=@pret,Suport=@suport where ID=@id";
+                salveazaCommand.Parameters.AddWithValue("id", id);
+            }
+            OleDbParameter data = new OleDbParameter();
+            data.OleDbType = OleDbType.Date;
+            data.Value = uxDateTimePickerData.Value;
+            //preluam valoriele din controale
+
+            int rec = salveazaCommand.ExecuteNonQuery();
+            if(rec > 0)
+            {
+                MessageBox.Show("Salvare reusit!");
+            }
+
+            if(conn.State == ConnectionState.Open)
+            {
+                conn.Close();
+            }
+        }
     }
 }
